@@ -1,3 +1,5 @@
+
+
 def main():
     while True:
         print("\n--- MENU PRINCIPAL ---")
@@ -22,7 +24,7 @@ def main():
 
                 case 1:
                     print()
-                    
+
         else:
             print("escolha uma opção valída")
 if __name__=="__main__":
