@@ -29,15 +29,16 @@ class Produto():
 
     def mudar_descrição(self, descriçao:str):
         self.descriçao = descriçao
-
-    def retirar_produto(self, quantidade_da_retirada):
+        
+        #ESSAS FUNÇÕES DEVEM FICAR NO SERVICE E NÃO AQUII!!!
+    '''def retirar_produto(self, quantidade_da_retirada):
         if quantidade_da_retirada > self.quantidade:
             raise ValueError('O valor da retirada não pode ser maior do que tem no estoque!')
         else:
             self.quantidade -= quantidade_da_retirada
 
     def adicionar_produto(self, quantidade_adicionada):
-        self.quantidade += quantidade_adicionada
+        self.quantidade += quantidade_adicionada'''
 
     def mudar_quanti_mini(self, quantida_minima):
 
