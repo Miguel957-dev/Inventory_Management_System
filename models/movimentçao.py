@@ -1,4 +1,4 @@
-from date import datetime 
+from datetime import datetime 
 
 class Movimentaçao:
     def __init__(self, id_movimentaçao, id_produto_movimentado, quantidade, tip_movimentaçao, data_hora):
