@@ -14,7 +14,7 @@ class Produto():
             self.quantidade = quantidade
             self.estoque_minimo = self.estoque_minimo
 
-    @property.getter
+    @property
     def preço(self):
         return f"O preço é {self._preço}"
 
