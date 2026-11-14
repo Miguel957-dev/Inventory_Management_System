@@ -1,7 +1,7 @@
 from datetime import datetime 
 
 class Movimentaçao:
-    def __init__(self, id_movimentaçao, id_produto_movimentado, quantidade, tip_movimentaçao, data_hora=None):
+    def __init__(self, id_movimentaçao:int | None, id_produto_movimentado:int, quantidade:float, tip_movimentaçao:str, data_hora=None):
         self.id_da_movimentaçao = id_movimentaçao
         self.id_do_produto_movimentado = id_produto_movimentado
         self.quantidade = quantidade
