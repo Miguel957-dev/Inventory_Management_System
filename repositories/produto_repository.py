@@ -3,6 +3,7 @@ from models.movimentçao import *
 from models.produto import *
 
 class Historico:
+    """Essa classe 'historico' estar responsavel por salvar movimentações em banco de dados, e buscar hitorico de movimentação com algumas especificações, que é buscar produto, buscar entradas e buscar saida de produtos """
     def __init__(self, db_path="estoque.db"):
         self.db_path = db_path
 

@@ -1,4 +1,5 @@
 class Produto():
+    """Classe produto cria um produto com todas as suas caracteristicas necessaria para movimentação e organização do estoque."""
     def __init__(self,id , nome, descrição, preço, quantidade, estoque_min):
         self.id = id
         self.nome = nome
@@ -13,6 +14,9 @@ class Produto():
             self._preço = preço
             self.quantidade = quantidade
             self.estoque_minimo = self.estoque_minimo
+
+    def __repr__(self):
+        return f"Produto (id={self.id}, nome={self.nome}, descrição={self.descriçao}, preço={self.preço})"
 
     @property
     def preço(self):
@@ -30,16 +34,5 @@ class Produto():
     def mudar_descrição(self, descriçao:str):
         self.descriçao = descriçao
         
-        #ESSAS FUNÇÕES DEVEM FICAR NO SERVICE E NÃO AQUII!!!
-    '''def retirar_produto(self, quantidade_da_retirada):
-        if quantidade_da_retirada > self.quantidade:
-            raise ValueError('O valor da retirada não pode ser maior do que tem no estoque!')
-        else:
-            self.quantidade -= quantidade_da_retirada
-
-    def adicionar_produto(self, quantidade_adicionada):
-        self.quantidade += quantidade_adicionada'''
-
     def mudar_quanti_mini(self, quantida_minima):
-
         self.estoque_minimo = quantida_minima
