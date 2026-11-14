@@ -40,8 +40,25 @@ class Historico:
         finally:
             conexao.close()
 
-    def buscar_por_produto(self,id_produto):
-        pass
+    def buscar_por_produto(self, id_produto):
+        conexao = sqlite3.connect(self.db_path)
+        cursor = conexao.cursor()
+
+        comando_sql = "SELECT id, produto_id, quantidade, tipo, data_hora FROM movimentacoes WHERE produto_id = ? ORDER BY data_hora DESC"
+        cursor.execute(comando_sql, (id_produto,))
+
+        try:
+            while True:
+                quanti = cursor.fetchmany(50)
+
+                if not quanti:
+                    break
+
+                for linha in quanti:
+                    yield Movimentaçao(* linha)
+
+        finally:
+            conexao.close()
 
     def buscar_entrada(self):
         pass
